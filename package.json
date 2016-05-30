@@ -1,0 +1,23 @@
+{
+  "name": "console-log-tracker",
+  "version": "1.0.0",
+  "description": "adds file names to console.logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ConsoleLogTracker"
+  },
+  "author": "Angie Yeh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "babel": {
+    "presets": ["es2015"]
+  }
+}
