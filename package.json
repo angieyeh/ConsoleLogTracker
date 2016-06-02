@@ -1,5 +1,5 @@
 {
-  "name": "Sleuthy",
+  "name": "sleuthy",
   "version": "0.0.1",
   "description": "Adds file names and line numbers to console.logs",
   "main": "index.js",

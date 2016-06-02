@@ -1,4 +1,4 @@
-# Sleuthy.js
+# sleuthy.js
 Sleuthy will help you keep track of where all your console.logs are! Add Sleuthy to your projects and it will add file names and line numbers to all your console.logs.
 
 Sleuthy is an node module you install and run your code like you normally do!
@@ -17,4 +17,4 @@ Currently it will only ignore directories from gitignore, not files. So if you'r
 
 ## Roadmap
 Allow users to sleuth console.logs from a single file.
-Allow users to ignore files they don't want sleuthed. 
+Allow users to ignore files they don't want sleuthed.
