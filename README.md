@@ -10,11 +10,11 @@ Sleuthy is an node module you install and run your code like you normally do!
 3.  `sleuthy.track(//path to directory)` the path must be an absolute path to a directory
     (e.g. sleuthy.track(__dirname))
 
-Sleuthy analyzes all directories and its as long as they aren't listed in your gitignore file.\s\s
-It will only search for console.logs in files that end in '.js' or '.jsx'.\s\s
-Requires users to provide a directory to sleuthy.track().\s\s
-Currently it will only ignore directories from gitignore, not files. So if you're gitignoring a .js file sleuthy will still analyze it.\s\s
+Sleuthy analyzes all directories and its as long as they aren't listed in your gitignore file. <br/>
+It will only search for console.logs in files that end in '.js' or '.jsx'. <br/>
+Requires users to provide a directory to sleuthy.track(). <br/>
+Currently it will only ignore directories from gitignore, not files. So if you're gitignoring a .js file sleuthy will still analyze it. <br/>
 
 ## Roadmap
-Allow users to sleuth console.logs from a single file.\s\s
-Allow users to ignore files they don't want sleuthed.\s\s
+Allow users to sleuth console.logs from a single file. <br/>
+Allow users to ignore files they don't want sleuthed. <br/>
