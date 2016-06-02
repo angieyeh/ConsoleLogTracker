@@ -5,9 +5,9 @@ function parse(filePath) {
     var pathTo = filePath.split('/');
     fileContents = fileContents.split('\n');
     var tracked = fileContents.map(function(lineOfCode, lineNum) {
-      if (lineOfCode.indexOf('console.log(') > -1) {
-        if (lineOfCode.indexOf(`console.log('${pathTo[pathTo.length - 1]}', ` ) === -1)
-          return lineOfCode.replace('console.log(', `console.log('${pathTo[pathTo.length - 1]}', 'line number: '${lineNum + 1}, `);
+      if (lineOfCode.indexOf('console.log('parseFiles.js', 'linenumber:8', ') > -1) {
+        if (lineOfCode.indexOf(`console.log('parseFiles.js', 'linenumber:9', '${pathTo[pathTo.length - 1]}', ` ) === -1)
+          return lineOfCode.replace('console.log('parseFiles.js', 'linenumber:10', ', `console.log('${pathTo[pathTo.length - 1]}', 'linenumber:${lineNum + 1}', `);
       }
       return lineOfCode;
     });
@@ -23,11 +23,11 @@ function recreateUserFile(fileContents, filePath) {
 }
 
 function writeToFile(fileContents, filePath) {
-  console.log('parseFiles.js', 'line number: 26', filePath);
   fs.writeFile(filePath, fileContents, function(err){
     if (err) throw err;
   });
 }
+
 module.exports = {
   parse,
 }

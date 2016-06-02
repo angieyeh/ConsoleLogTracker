@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var parseFiles = require('./parseFiles');
+
 var filesArray = [];
 
 function getFileNames(appPath) {
@@ -18,16 +19,13 @@ function getFileNames(appPath) {
       });
       if (allDirs.length > 0)
         return ignoreDirectories(appPath, allDirs);
-      console.log('logic.js', 'line number: 20', filesArray);
+        
       filesArray.forEach(function(file) {
         return parseFiles.parse(file);
       });
     });
   }
-
 }
-
-getFileNames(__dirname);
 
 function ignoreDirectories(appPath, allDirs) {
   fs.readFile(__dirname + '/.gitignore', 'utf8', function(err, data) {

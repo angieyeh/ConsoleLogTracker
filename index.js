@@ -1,10 +1,9 @@
 var logic = require('./logic');
 
+var sleuthy = {};
 
-function directory(dirname) {
+sleuthy.track = function (dirname) {
   logic.getFileNames(dirname);
 }
 
-directory(__dirname);
-
-module.exports 
+module.exports = sleuthy;

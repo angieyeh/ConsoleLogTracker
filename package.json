@@ -1,16 +1,19 @@
 {
-  "name": "console-log-tracker",
-  "version": "1.0.0",
-  "description": "adds file names to console.logs",
+  "name": "Sleuthy",
+  "version": "0.0.1",
+  "description": "Adds file names and line numbers to console.logs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "console.log"
+  ],
   "repository": {
     "type": "git",
     "url": "ConsoleLogTracker"
   },
-  "author": "Angie Yeh",
+  "author": "Angie Yeh <angieyeh24@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.9.0",
