@@ -6,6 +6,4 @@ sleuthy.track = function (dirname) {
   logic.getFileNames(dirname);
 }
 
-sleuthy.track(__dirname);
 module.exports = sleuthy;
-

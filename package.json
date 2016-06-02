@@ -1,6 +1,6 @@
 {
   "name": "sleuthy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds file names and line numbers to console.logs",
   "main": "index.js",
   "scripts": {
