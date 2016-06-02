@@ -19,7 +19,8 @@ function getFileNames(appPath) {
       });
       if (allDirs.length > 0)
         return ignoreDirectories(appPath, allDirs);
-        
+
+      console.log('logic.js', 'linenumber:23', filesArray)
       filesArray.forEach(function(file) {
         return parseFiles.parse(file);
       });
@@ -54,3 +55,5 @@ function filterDirectories(appPath, allDirs, ignoredDirs) {
 module.exports = {
   getFileNames,
 }
+
+
