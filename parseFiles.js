@@ -11,10 +11,17 @@ function parse(file) {
       }
       return lineOfCode;
     });
-    console.log(tracked)
+    writeToFile(tracked)
   });
 }
 
+function writeToFile(fileContents) {
+
+  var insertNewLineCarriage = fileContents.map(function(lineOfCode) {
+    return `${lineOfCode}\n`
+  });
+  console.log(insertNewLineCarriage.join(''));
+}
 
 module.exports = {
   parse,
