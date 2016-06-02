@@ -7,19 +7,4 @@ function directory(dirname) {
 
 directory(__dirname);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+module.exports 

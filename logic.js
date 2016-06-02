@@ -4,24 +4,27 @@ var parseFiles = require('./parseFiles');
 var filesArray = [];
 
 function getFileNames(appPath) {
-  fs.readdir(appPath, function(err, files) {
-    var jsFiles = files.filter(function(elem) {
-      return elem.slice(-2) === 'js' || elem.slice(-3) === '.jsx';
-    });
-    filesArray = filesArray.concat(jsFiles.map(function(files) {
-      return `${appPath}/${files}`;
-    }));
+  if (fs.statSync(appPath).isDirectory()) {
+    fs.readdir(appPath, function(err, files) {
+      var jsFiles = files.filter(function(elem) {
+        return elem.slice(-2) === 'js' || elem.slice(-3) === '.jsx';
+      });
+      filesArray = filesArray.concat(jsFiles.map(function(files) {
+        return `${appPath}/${files}`;
+      }));
 
-    var allDirs = files.filter(function(dir) {
-      return fs.statSync(path.join(appPath, dir)).isDirectory();
+      var allDirs = files.filter(function(dir) {
+        return fs.statSync(path.join(appPath, dir)).isDirectory();
+      });
+      if (allDirs.length > 0)
+        return ignoreDirectories(appPath, allDirs);
+      console.log('logic.js', 'line number: 20', filesArray);
+      filesArray.forEach(function(file) {
+        return parseFiles.parse(file);
+      });
     });
-    if (allDirs.length > 0)
-      return ignoreDirectories(appPath, allDirs);
-    console.log('logic.js', 'line number: 20', filesArray);
-    filesArray.forEach(function(file) {
-      return parseFiles.parse(file);
-    });
-  });
+  }
+
 }
 
 getFileNames(__dirname);
@@ -53,4 +56,3 @@ function filterDirectories(appPath, allDirs, ignoredDirs) {
 module.exports = {
   getFileNames,
 }
-
