@@ -6,7 +6,7 @@ function parse(filePath) {
     fileContents = fileContents.split('\n');
     var tracked = fileContents.map(function(lineOfCode, lineNum) {
       if (lineOfCode.indexOf('console.log(') > -1) {
-        if (lineOfCode.indexOf(`console.log('${pathTo[pathTo.length - 1]}', ` ) === -1)
+        if (lineOfCode.indexOf(`'${pathTo[pathTo.length - 1]}', 'linenumber:${lineNum + 1}'`) === -1)
           return lineOfCode.replace('console.log(', `console.log('${pathTo[pathTo.length - 1]}', 'linenumber:${lineNum + 1}', `);
       }
       return lineOfCode;
